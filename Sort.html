@@ -1,0 +1,60 @@
+<html>
+<head>
+<meta charset="utf-8" >
+
+<style type="text/css">
+body{
+background:gray;
+margin: 0px auto;
+}
+#left{
+background:red;
+width:30%;
+height:100%; 
+padding-top: 40px;
+color:#000000;
+float: left;
+}
+#right{
+width:70%;
+float: right;
+background:#fff1ff;
+height: 100%;
+background: #ffffff;
+font-size: 30px;
+
+}
+#header{
+background:#ffffff;
+border-radius: 40px;
+width: 100%;
+height: 200px;
+padding: 20px;
+}
+</style>
+</head>
+<body>
+	<div id="header">
+<h1>SORT YOUR ARRAY</h1>
+	</div>
+<div id="left">
+<input type="text" id="name" onkeypress="if(event.which==13){add();}" ><input type="button" value="submit" onClick="add()"><br>elementebi:<br>
+<div id="input"></div></div>
+<div id="right">sortirebulebi:<br><div id="sortirebulebia"></div></div>
+<script type="text/javascript">
+var names=new Array();
+var axali=new Array();
+function add(){
+names.unshift(document.getElementById('name').value);
+axali.unshift(document.getElementById('name').value);
+document.getElementById('name').value="";
+document.getElementById('input').innerHTML=names.join("<br><hr>");
+document.getElementById("sortirebulebia").innerHTML=axali.sort().join("<br><hr>");
+}
+
+
+
+
+</script>
+</body>
+</html>
